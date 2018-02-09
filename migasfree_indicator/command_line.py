@@ -1,4 +1,4 @@
-from migasfree_indicator import indicator
+from gdrive_indicator import indicator
 
 
 def main():

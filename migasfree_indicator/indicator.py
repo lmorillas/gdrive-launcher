@@ -57,7 +57,7 @@ if not os.path.exists(version_file):
         sys.prefix,
         'share',
         'doc',
-        'migasfree-launcher',
+        'gdrive-launcher',
         'VERSION'
     )
 
@@ -69,7 +69,7 @@ from migasfree_client.network import get_gateway
 
 from .console import Console
 
-CONF_FILE = "/etc/migasfree-indicator.conf"
+CONF_FILE = "/etc/gdrive-indicator.conf"
 WAIT_IP_TIMEOUT = 120  # seconds
 DEFAULT_INTERVAL = 24  # hours
 
@@ -84,15 +84,15 @@ def has_ip_address():
 
 
 class SystrayIconApp(object):
-    APP_INDICATOR_ID = 'migasfree-indicator'
+    APP_INDICATOR_ID = 'gdrive-indicator'
     APP_NAME = _('Migasfree Indicator')
-    APP_DESCRIPTION = _('Indicator to view and control migasfree client actions')
+    APP_DESCRIPTION = _('Indicator to view and control gdrive client actions')
 
     SCHEMA = "org.migasfree.console"
     SHOW_CONSOLE = "show-console"
 
-    CMD_UPGRADE = "sudo migasfree-launcher"
-    CMD_FORCE_UPGRADE = "sudo migasfree-launcher force-upgrade"
+    CMD_UPGRADE = "sudo gdrive-launcher"
+    CMD_FORCE_UPGRADE = "sudo gdrive-launcher force-upgrade"
     CMD_LABEL = "migasfree-label"
 
     FIRST_RUN = "/var/tmp/migasfree/first-tags.conf"
@@ -394,7 +394,7 @@ class SystrayIconApp(object):
 
 def main():
     locale.setlocale(locale.LC_ALL, '.'.join(locale.getdefaultlocale()))
-    gettext.textdomain('migasfree-launcher')
+    gettext.textdomain('gdrive-launcher')
 
     config = get_config(CONF_FILE, 'indicator')
     if isinstance(config, dict):

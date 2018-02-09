@@ -1,7 +1,7 @@
-chmod 0440 /etc/sudoers.d/migasfree-launcher
+chmod 0440 /etc/sudoers.d/gdrive-launcher
 
 if dpkg-maintscript-helper supports rm_conffile 2>/dev/null
 then
-    dpkg-maintscript-helper rm_conffile /etc/xdg/autostart/migasfree-launcher.desktop 1.12-1 -- "$@"
-    dpkg-maintscript-helper rm_conffile /etc/migasfree-launcher.conf 1.12-1 -- "$@"
+    dpkg-maintscript-helper rm_conffile /etc/xdg/autostart/gdrive-launcher.desktop 1.12-1 -- "$@"
+    dpkg-maintscript-helper rm_conffile /etc/gdrive-launcher.conf 1.12-1 -- "$@"
 fi

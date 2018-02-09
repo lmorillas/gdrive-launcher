@@ -29,7 +29,7 @@ from distutils.dep_util import newer
 PATH = os.path.dirname(os.path.abspath(__file__))
 README = open(os.path.join(PATH, 'README.md')).read()
 VERSION = open(os.path.join(PATH, 'VERSION')).read().splitlines()[0]
-APP_NAME = 'migasfree-launcher'
+APP_NAME = 'gdrive-launcher'
 
 PO_DIR = 'i18n'
 MO_DIR = os.path.join('build', 'mo')
@@ -80,18 +80,18 @@ class InstallData(install_data):
 setup(
     name = APP_NAME,
     version = VERSION,
-    description='Indicator to view and control migasfree client actions',
+    description='Indicator to view and control gdrive client actions',
     packages = find_packages(),
     data_files = [
-        ('share/doc/migasfree-launcher', [
+        ('share/doc/gdrive-launcher', [
             'AUTHORS',
             'INSTALL',
             'LICENSE',
             'README.md',
             'VERSION',
         ]),
-        ('share/applications', ['data/migasfree-indicator.desktop']),
-        ('/etc/xdg/autostart', ['data/migasfree-indicator.desktop']),
+        ('share/applications', ['data/gdrive-indicator.desktop']),
+        ('/etc/xdg/autostart', ['data/gdrive-indicator.desktop']),
         ('share/icons/hicolor/scalable/apps', [
             'data/img/migasfree-apps.svg',
             'data/img/migasfree-console.svg',
@@ -106,11 +106,11 @@ setup(
             'data/img/migasfree-warning-light.svg',
         ]),
         ('share/glib-2.0/schemas', ['data/org.migasfree.tray.gschema.xml']),
-        ('/etc', ['data/migasfree-indicator.conf']),
-        ('/etc/sudoers.d', ['data/sudo/migasfree-launcher']),
+        ('/etc', ['data/gdrive-indicator.conf']),
+        ('/etc/sudoers.d', ['data/sudo/gdrive-launcher']),
     ],
     scripts=[
-        'bin/migasfree-launcher',
+        'bin/gdrive-launcher',
     ],
     cmdclass={
         'build': BuildData,
@@ -137,7 +137,7 @@ setup(
     ],
     entry_points = {
         'console_scripts': [
-            'migasfree-indicator=migasfree_indicator.command_line:main'
+            'gdrive-indicator=gdrive_indicator.command_line:main'
         ],
     },
 )

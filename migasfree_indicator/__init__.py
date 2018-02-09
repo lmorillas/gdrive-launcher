@@ -21,7 +21,7 @@ import __builtin__
 __builtin__._ = gettext.gettext
 
 LOCALE_PATH = '/usr/share/locale'
-DOMAIN = 'migasfree-launcher'
+DOMAIN = 'gdrive-launcher'
 
 gettext.install(DOMAIN, LOCALE_PATH, unicode=1)
 

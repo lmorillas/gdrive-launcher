@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Syntax: migasfree-launcher [force-upgrade]
+# Syntax: gdrive-launcher [force-upgrade]
 
 function run_scripts
 {
@@ -61,7 +61,7 @@ else
 fi
 
 # execute prerun scripts
-run_scripts /usr/share/migasfree-launcher/prerun.d
+run_scripts /usr/share/gdrive-launcher/prerun.d
 
 if [ -f $_FIRST ]
 then
@@ -102,7 +102,7 @@ else
 fi
 
 # execute postrun scripts
-run_scripts /usr/share/migasfree-launcher/postrun.d
+run_scripts /usr/share/gdrive-launcher/postrun.d
 
 if [ -f "$_FIRST" ]
 then

@@ -1,7 +1,7 @@
 Migasfree launcher
 ==================
 
-Indicator to view and control migasfree client actions
+Indicator to view and control gdrive client actions
 
 
 License

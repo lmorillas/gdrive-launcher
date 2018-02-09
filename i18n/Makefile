@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-PROJECT = migasfree-indicator
+PROJECT = gdrive-indicator
 
 GETTEXT = /usr/bin/xgettext
 MSGMERGE = /usr/bin/msgmerge
